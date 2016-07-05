@@ -69,6 +69,8 @@ public:
 	int sequenceStart;
 	int macroSel;
 
+	int maxDelay;
+
 public:
 	CAppIni(const char *ini_path);
 	virtual ~CAppIni();

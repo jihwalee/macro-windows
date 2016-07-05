@@ -56,6 +56,8 @@ void CAppIni::TransferAllData (bool bSave)
 
 	Transfer (bSave, "sequenceStart",		sequenceStart,			1000);
 	Transfer (bSave, "macroSel",			macroSel,				0);
+
+	Transfer (bSave, "maxDelay",			maxDelay,				20);
 }
 
 CAppIni g_ini("key_macro.ini");
