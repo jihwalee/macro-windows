@@ -81,7 +81,7 @@ IDR_MAINFRAME2          ICON                    "res\\idr_main.ico"
 IDD_KEY_MACRO_DIALOG DIALOGEX 0, 0, 183, 228
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
-CAPTION "매크로"
+CAPTION "macro-windows"
 FONT 9, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     LTEXT           "",IDC_STATIC_HOMEPAGE,7,194,169,8
@@ -103,7 +103,7 @@ BEGIN
     LTEXT           "Version: --- (Updated: ---)",IDC_STATIC_VERSION,7,193,169,8
     PUSHBUTTON      "설정",IDC_BUTTON_CONFIG,7,207,38,14
     PUSHBUTTON      "종료",ID_QUIT,138,207,38,14
-    LISTBOX         IDC_LIST_MACROS2,7,71,129,84,LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_MACROS2,7,71,129,101,LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
     PUSHBUTTON      "입력상태",IDC_BUTTON_KEY_MOUSE_STATUS,50,207,38,14
     PUSHBUTTON      "실행상태",IDC_BUTTON_MACRO_DEBUG,93,207,38,14
 END
@@ -556,12 +556,12 @@ BEGIN
     BEGIN
         BLOCK "041203b5"
         BEGIN
-            VALUE "FileDescription", "키보드/마우스 매크로 V2"
-            VALUE "FileVersion", "Version: 2.22b (Updated: 2014.9.26)"
+            VALUE "FileDescription", "macro-windows"
+            VALUE "FileVersion", "Version: 2.22b"
             VALUE "InternalName", "key_macro.exe"
             VALUE "OriginalFilename", "key_macro.exe"
-            VALUE "ProductName", "매크로"
-            VALUE "ProductVersion", "Version: 2.22b (Updated: 2014.9.26)"
+            VALUE "ProductName", "macro-windows"
+            VALUE "ProductVersion", "Version: 2.22b"
         END
     END
     BLOCK "VarFileInfo"

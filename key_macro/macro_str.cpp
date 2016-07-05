@@ -133,10 +133,11 @@ const char *GetItemDescription (const sMacroItem &item)
 			}
 		}
 		else if ((item.delay.flags&0xF1) == 0x20){
-			n += _snprintf (desc+n, MAX_DESC-n, "    화면색대기(%d, %d, %d) 허용(%d) 위치(%d, %d) ", 
+			n += _snprintf (desc+n, MAX_DESC-n, "    화면색대기(%d, %d, %d) 허용(%d) 위치(%d, %d) 최대(%d)", 
 				(int)GetRValue (item.delay.delay), (int)GetGValue (item.delay.delay), (int)GetBValue (item.delay.delay),
 				(int)((item.delay.delay>>24)&0xFF),
-				(int)(short)LOWORD (item.delay.xy), (int)(short)HIWORD (item.delay.xy));
+				(int)(short)LOWORD (item.delay.xy), (int)(short)HIWORD (item.delay.xy),
+				(int)GetRValue(item.delay.maxdelay));
 		}
 		break;
 

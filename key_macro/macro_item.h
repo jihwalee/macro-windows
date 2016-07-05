@@ -7,6 +7,7 @@ using namespace std;
 
 #define MOUSEEVENTF_SCREEN_INDEPENDENT_POS         0x0200
 
+#define MACRO_ITEM_SIZE 4
 
 struct sKeybd {
 	// Hi  byte - Scan code
@@ -57,7 +58,6 @@ struct sDelay {
 	// 0x20 - 화면 색 변환 대기
 	ulong flags;	// 
 	ulong xy;		// 랜덤 지연 시간(0~10), 화면 색인식에서 화면 위치
-
 	long maxdelay;	// 최대지연
 
 	bool StepMaxDelay(long &time_remain, int dt);
@@ -138,12 +138,13 @@ struct sMacroItem {
 		sMCall mcall;
 		sLock  lock;
 		sLoop  loop;
-		long   data[3];
+		long   data[MACRO_ITEM_SIZE];
 	};
 
 	sMacroItem () : type(MI_NONE) 
 	{ 
-		data[0] = data[1] = data[2] = 0;
+		for (int i = 0; i < MACRO_ITEM_SIZE; i++)
+			data[i] = 0;
 	}
 	
 	~sMacroItem () 

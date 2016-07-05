@@ -457,19 +457,19 @@ void Ckey_macroDlg::OnTimer(UINT_PTR nIDEvent)
 				if (count%2) {
 					SetIcon (m_hIcon2, FALSE);
 					SetIcon (m_hIcon2, TRUE);
-					TrayIconChange (m_hIcon2, "키보드/마우스 매크로 프로그램 - 매크로 실행 중입니다.");
+					TrayIconChange (m_hIcon2, "macro-windows - 매크로 실행 중입니다.");
 				}
 				else {
 					SetIcon (m_hIcon, FALSE);
 					SetIcon (m_hIcon, TRUE);
-					TrayIconChange (m_hIcon, "키보드/마우스 매크로 프로그램 - 매크로 실행 중입니다.");
+					TrayIconChange (m_hIcon, "macro-windows - 매크로 실행 중입니다.");
 				}
 			}
 			else {
 				if (count%2) {
 					SetIcon (m_hIcon, FALSE);
 					SetIcon (m_hIcon, TRUE);
-					TrayIconChange (m_hIcon, "키보드/마우스 매크로 프로그램 - 더블클릭 하세요.");
+					TrayIconChange (m_hIcon, "macro-windows - 더블클릭 하세요.");
 				}
 			}
 		}

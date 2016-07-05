@@ -40,7 +40,7 @@ void CAppIni::TransferAllData (bool bSave)
 	Transfer (bSave, "statusSY",			statusSY,				300);
 
 	Transfer (bSave, "macroFileName",		macroFileName,			MAX_PATH,	"macro.m");
-	Transfer (bSave, "title",				title,					MAX_PATH,	"키보드/마우스 매크로 V2");
+	Transfer (bSave, "title",				title,					MAX_PATH,	"macro-windows");
 	macroFileName[MAX_PATH] = '\0';
 	title[MAX_PATH] = '\0';
 

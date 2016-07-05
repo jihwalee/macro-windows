@@ -37,7 +37,7 @@ BOOL Ckey_macroApp::InitInstance()
 
 	// !!! 응용프로그램이 이미 실행중인지 검사하여, 
 	// 실행중일 때는 현재 실행중인 응용프로그램에 초기화 메시지 전송
-	if (ApplicationAlreadyExist ("#32770", "키보드/마우스 매크로"))	{
+	if (ApplicationAlreadyExist ("#32770", "macro-windows"))	{
 		return FALSE;
 	}
 
@@ -50,7 +50,7 @@ BOOL Ckey_macroApp::InitInstance()
 	// 해당 설정이 저장된 레지스트리 키를 변경하십시오.
 	// TODO: 이 문자열을 회사 또는 조직의 이름과 같은
 	// 적절한 내용으로 수정해야 합니다.
-	SetRegistryKey(_T("키보드/마우스 매크로 프로그램"));
+	SetRegistryKey(_T("macro-windows"));
 
 	g_ini.LoadData ();
 	_mmtm.Start(1);

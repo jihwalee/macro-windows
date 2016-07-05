@@ -469,7 +469,7 @@ void sMacroItem::Delete ()
 void sMacroItem::Copy (const sMacroItem &mi) 
 {
 	type = mi.type;
-	memcpy (&data[0], &mi.data[0], 3*sizeof(long));
+	memcpy (&data[0], &mi.data[0], MACRO_ITEM_SIZE * sizeof(long));
 
 	if (type == MI_STRING) {
 		string.string = new char [string.length + 1];
