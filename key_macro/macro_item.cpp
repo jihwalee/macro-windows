@@ -156,7 +156,7 @@ bool sDelay::StepDelay (long &time_remain, int dt)
 bool sDelay::StepMaxDelay(long &time_remain, int dt)
 {
 	if (time_remain == 0) {
-		time_remain = GetRandomDelay(maxdelay, 0);
+		time_remain = 20;
 	}
 	else {
 		time_remain -= dt;

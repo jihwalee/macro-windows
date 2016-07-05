@@ -7,7 +7,7 @@ using namespace std;
 
 #define MOUSEEVENTF_SCREEN_INDEPENDENT_POS         0x0200
 
-#define MACRO_ITEM_SIZE 4
+#define MACRO_ITEM_SIZE 3
 
 struct sKeybd {
 	// Hi  byte - Scan code
@@ -58,7 +58,7 @@ struct sDelay {
 	// 0x20 - 화면 색 변환 대기
 	ulong flags;	// 
 	ulong xy;		// 랜덤 지연 시간(0~10), 화면 색인식에서 화면 위치
-	long maxdelay;	// 최대지연
+	//long maxdelay = 20;	// 최대지연
 
 	bool StepMaxDelay(long &time_remain, int dt);
 	bool StepDelay (long &time_remain, int dt);
