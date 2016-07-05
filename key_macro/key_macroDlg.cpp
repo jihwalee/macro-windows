@@ -136,7 +136,7 @@ BOOL Ckey_macroDlg::OnInitDialog()
 	
 	// 트레이 아이콘을 만듭니다.
 	m_hIcon2 = LoadIcon (AfxGetInstanceHandle(), MAKEINTRESOURCE (IDR_MAINFRAME2));
-	TrayIconCreate(m_hWnd, m_hIcon, "키보드/마우스 매크로 프로그램 - 더블클릭 하세요.");
+	TrayIconCreate(m_hWnd, m_hIcon, "매크로 프로그램 - 더블클릭 하세요.");
 
 	// set_log_property (g_ini.logFileName, 1000000);
 
@@ -169,7 +169,7 @@ BOOL Ckey_macroDlg::OnInitDialog()
 	SetDlgItemText (IDC_STATIC_VERSION, GetVersionInfo("ProductVersion"));
 
 	_staticHomepage.SetURL("http://blog.daum.net/pg365/250");
-	_staticHomepage.SetToolTipText("키보드/마우스 매크로 프로그램 웹페이지 방문");
+	_staticHomepage.SetToolTipText("웹페이지 방문");
 	_staticHomepage.SetLinkCursor(::LoadCursor(0, MAKEINTRESOURCE(IDC_HAND)));
 
 	// 만일 트레이 아이콘으로 최소화 설정이 있으면, 트레이 아이콘으로 최소화 한다.

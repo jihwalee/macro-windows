@@ -58,6 +58,9 @@ struct sDelay {
 	ulong flags;	// 
 	ulong xy;		// 랜덤 지연 시간(0~10), 화면 색인식에서 화면 위치
 
+	long maxdelay;	// 최대지연
+
+	bool StepMaxDelay(long &time_remain, int dt);
 	bool StepDelay (long &time_remain, int dt);
 	bool StepTime  (long &time_remain, int dt);
 	bool StepKey   (long &wait_key);

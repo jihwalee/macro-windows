@@ -152,6 +152,23 @@ bool sDelay::StepDelay (long &time_remain, int dt)
 	return false;
 }
 
+
+bool sDelay::StepMaxDelay(long &time_remain, int dt)
+{
+	if (time_remain == 0) {
+		time_remain = GetRandomDelay(maxdelay, 0);
+	}
+	else {
+		time_remain -= dt;
+	}
+	if (time_remain <= 0) {
+		time_remain = 0;
+		return true;
+	}
+	return false;
+}
+
+
 bool sDelay::StepTime (long &time_remain, int dt)
 {
 	if (time_remain == 0) {

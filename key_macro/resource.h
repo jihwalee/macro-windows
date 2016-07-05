@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ generated include file.
-// Used by key_macro.rc
+// Microsoft Visual C++에서 생성한 포함 파일입니다.
+// key_macro.rc에서 사용되고 있습니다.
 //
 #define IDD_KEY_MACRO_DIALOG            102
 #define IDR_MAINFRAME                   128
@@ -30,6 +30,7 @@
 #define IDC_BUTTON_ADD_MOUSE            1006
 #define IDC_EDIT_DELAY                  1006
 #define IDC_BUTTON_ADD_DELAY            1007
+#define IDC_EDIT_MAXDELAY               1007
 #define IDC_BUTTON_DELETE               1008
 #define IDC_RADIO_KEY_3                 1008
 #define IDC_RADIO_DELAY                 1008
@@ -273,7 +274,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        147
+#define _APS_NEXT_RESOURCE_VALUE        149
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1128
 #define _APS_NEXT_SYMED_VALUE           101

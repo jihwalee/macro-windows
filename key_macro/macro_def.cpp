@@ -173,7 +173,10 @@ void sMacro::MacroStep (int dt)
 			if (mi.delay.StepKey (wait_key)) index++;
 		}
 		else if ((mi.delay.flags&0xF1) == 0x20){
-			if (mi.delay.StepColor (wait_color, wait_xy)) index++;
+			if (mi.delay.StepColor(wait_color, wait_xy)) 
+			{ index++; }
+			else if (mi.delay.StepMaxDelay(time_remain, dt)) 
+			{ index++; }
 		}
 		break;
 	case MI_STRING:
